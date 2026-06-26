@@ -149,40 +149,40 @@ When you click a seat, Socket.io broadcasts the hold to all clients in the same 
 ## Implementation Roadmap
 
 ### Phase 1 — Backend Foundation
-- [ ] Project setup: Express + MongoDB + Mongoose
-- [ ] Movie schema (title, description, genre, duration, poster, rating)
-- [ ] Hall schema (rows, columns, seat layout)
-- [ ] Showtime schema (movie ref, hall ref, date, time, price)
-- [ ] Booking schema (user ref, showtime ref, seats, qr_code, status)
-- [ ] Seed script with 10 movies and 3 halls
+- [x] Project setup: Express + MongoDB + Mongoose
+- [x] Movie schema (title, description, genre, duration, poster, rating)
+- [x] Hall schema (rows, columns, seat layout)
+- [x] Showtime schema (movie ref, hall ref, date, time, price)
+- [x] Booking schema (user ref, showtime ref, seats, qr_code, status)
+- [x] Seed script with 10 movies and 3 halls
 
 ### Phase 2 — Auth + User Preferences
-- [ ] Register / Login / Logout (JWT, HTTP-only cookie)
-- [ ] User schema: includes `watchHistory`, `preferredGenres`, `ratings`
-- [ ] Protected routes middleware
-- [ ] User profile endpoint (bookings history, preferences)
+- [x] Register / Login / Logout (JWT, HTTP-only cookie)
+- [x] User schema: includes `watchHistory`, `preferredGenres`, `ratings`
+- [x] Protected routes middleware
+- [x] User profile endpoint (bookings history, preferences)
 
 ### Phase 3 — Live Seat Map
-- [ ] SVG seat map React component (rows × columns grid)
-- [ ] Socket.io: join showtime room, broadcast seat holds, release on disconnect
-- [ ] 3-minute seat hold timer (prevent ghost locks)
-- [ ] Booking confirmation: update seat status in MongoDB + emit to all clients
-- [ ] QR code generation on booking success (encode booking ID)
+- [x] SVG seat map React component (rows × columns grid)
+- [x] Socket.io: join showtime room, broadcast seat holds, release on disconnect
+- [x] 3-minute seat hold timer (prevent ghost locks)
+- [x] Booking confirmation: update seat status in MongoDB + emit to all clients
+- [x] QR code generation on booking success (encode booking ID)
 
 ### Phase 4 — AI Movie Advisor
-- [ ] Ollama integration (qwen2.5:7b)
-- [ ] Mood → intent parsing prompt (few-shot, Turkish examples)
-- [ ] MongoDB query builder from parsed constraints
-- [ ] Top-3 recommendation ranking with reasoning
-- [ ] Advisor chat UI component (collapsible, floating)
-- [ ] Post-watch rating → store in user preferences for future recommendations
+- [x] Ollama integration (qwen2.5:7b)
+- [x] Mood → intent parsing prompt (few-shot, Turkish examples)
+- [x] MongoDB query builder from parsed constraints
+- [x] Top-3 recommendation ranking with reasoning
+- [x] Advisor chat UI component (collapsible, floating)
+- [x] Post-watch rating → store in user preferences for future recommendations
 
 ### Phase 5 — Admin Dashboard + Polish
-- [ ] Admin role (middleware guard)
-- [ ] Admin UI: add/edit/delete movies, halls, showtimes
-- [ ] Dashboard analytics: most booked movies, seat utilization per hall
-- [ ] Mobile-responsive seat map
-- [ ] Email confirmation (Nodemailer) with QR ticket attachment
+- [x] Admin role (middleware guard)
+- [x] Admin UI: add/edit/delete movies, halls, showtimes
+- [x] Dashboard analytics: most booked movies, seat utilization per hall
+- [x] Mobile-responsive seat map
+- [x] Email confirmation (Nodemailer) with QR ticket attachment
 
 ---
 
